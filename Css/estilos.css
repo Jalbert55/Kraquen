@@ -1,0 +1,38 @@
+.logo {
+    width: 20%;
+}
+
+.nav-kraquen {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-kraquen .nav-link {
+    margin-left: 50px;
+    font-weight: bold;
+}
+
+.img-servicios {
+    width: 40px;
+    margin-bottom: 2em;
+}
+
+@media only screen and (max-width: 768px) {
+    .logo {
+        width: 25%;
+        margin-left: 20px;
+    }
+    .navbar-toggler {
+        float: left;
+        margin-left: 17em;
+        position: fixed;
+    }
+    .nav-kraquen {
+        display: inherit;
+        justify-content: inherit;
+        margin-left: 20px;
+    }
+    .nav-kraquen .nav-link {
+        margin-left: 15px;
+    }
+}

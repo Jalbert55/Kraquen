@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/587b085de0.js" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="Css/estilos.css">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-light py-4 bg-white sticky-top">
+        <div class="container-fluid">
+            <a href=""><img class="logo img-fluid" src="/Img/Logos/Logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse nav-kraquen border-bottom border-danger" id="navbarCollapse">
+                <ul class="navbar-nav mt-4 mb-4">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="Inicio" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="Somos" href="#">Somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Kraquen familiar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span class="fa fa-search danger"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+	<script type="text/javascript"> 
+		
+		$('#Somos').click(function(){
+			var esperar = 1000;
+			$.ajax({
+				
+				url: "inc/Somos.html",
+				beforeSend : function(){
+					$('#contenido').text('Cargando...');
+				},
+				success : function(data){
+					setTimeout(function(){
+						$('#contenido').html(data);
+					}, esperar);
+				}
+			});
+			var active = document.getElementsByClassName("active");
+			for (var i = 0; i<active.length; i++) 
+			{
+		   	active[i].classList.remove("active");
+			}
+		});
+		
+		$('#Inicio').click(function(){
+			var esperar = 1000;
+			$.ajax({
+				
+				url: "inc/Inicio.html",
+				beforeSend : function(){
+					$('#contenido').text('Cargando...');
+				},
+				success : function(data){
+					setTimeout(function(){
+						$('#contenido').html(data);
+					}, esperar);
+				}
+			});
+		});
+		
+	</script>
+    <div class="container-fluid border pt-5" id="contenido">
+        <div class="row">
+            <div class="col-md-">
+                <div class="col-md-6">
+                    <p class="">PLATAFORMA <br> DIGITAL <br> DE OBJETOS MULTIMEDIA</p>
+                    <ul class="d-flex">
+                        <li>gestiona</li>
+                        <li class="ml-5">preserva</li>
+                        <li class="ml-5">exibe</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <p>Es una solución integral que consiste en la construcción, preservación y difusión digital de acervos multimedia, especializada en el resguardo de contenidos para: Museos, Bibliotecas, Videotecas, Hemerotecas, etc.</p>
+                    <a href="">saber más</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <section>
+        <div class="container-fluid bg-danger">
+            <div class="row mb-5">
+                <div class="col-9 text-left mt-3 ml-5" data-aos="fade">
+                    <h2 class="section-heading text-uppercase pt-5">Servicios</h2>
+                    <p>Gestiona Preserva Exhibe</p>
+                </div>
+            </div>
+            <div class="row justify-content-end pr-5">
+
+                <div class="col-9 col-md-3 col-lg-2 mb-2 mb-lg-2">
+                    <a href="#" class="block__16443 text-left d-block">
+                        <span class="custom-icon mx-auto">
+                            <span class="icon-line-tools d-block text-center">
+                                <img class="img-servicios" src="Img/Iconos/1.png" alt="">
+                            </span>
+                        </span>
+                        <h3 class="text-center">Base de datos</h3>
+                        <hr class="bg-white">
+                        <p>Diagnosticamos, auditamos, normalizamos y etiquetamos las bases de datos para su correcta recuperación y vinculación.</p>
+                    </a>
+                </div>
+
+                <div class="col-9 col-md-3 col-lg-2 mb-2 mb-lg-2">
+                    <a href="#" class="block__16443 text-left d-block">
+                        <span class="custom-icon mx-auto">
+                            <span class="icon-line-tools d-block text-center">
+                                <img class="img-servicios" src="Img/Iconos/2.png" alt="">
+                            </span>
+                        </span>
+                        <h3 class="text-center">Digitalización</h3>
+                        <hr class="bg-white">
+                        <p>Creamos estrategias de comunicación interna para ayudarte a transmitir los planes de acción, valores de la empresa, campañas de integración y hacer crecer tu cultura empresarial.</p>
+                    </a>
+                </div>
+                <div class="col-9 col-md-3 col-lg-2 mb-2 mb-lg-2">
+
+                    <a href="#" class="block__16443 text-left d-block">
+                        <span class="custom-icon mx-auto">
+                            <span class="icon-line-tools d-block text-center">
+                                <img class="img-servicios" src="Img/Iconos/3.png" alt="">
+                            </span>
+                        </span>
+                        <h3 class="text-center">Comunicación visual</h3>
+                        <hr class="bg-white">
+                        <p>Creamos estrategias de comunicación interna para ayudarte a transmitir los planes de acción, valores de la empresa, campañas de integración y hacer crecer tu cultura empresarial.</p>
+                    </a>
+
+                </div>
+                <div class="col-9 col-md-3 col-lg-2 mb-2 mb-lg-2">
+                    <a href="#" class="block__16443 text-left d-block">
+                        <span class="custom-icon mx-auto">
+                            <span class="icon-line-tools d-block text-center">
+                                <img class="img-servicios" src="Img/Iconos/4.png" alt="">
+                            </span>
+                        </span>
+                        <h3 class="text-center">Interacciones y experiencias</h3>
+                        <hr class="bg-white">
+                        <p>Creamos estrategias de comunicación interna para ayudarte a transmitir los planes de acción, valores de la empresa, campañas de integración y hacer crecer tu cultura empresarial.</p>
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="/Js/bootstrap.bundle.min.js "></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js " integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js " integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF " crossorigin="anonymous "></script>
+    -->
+</body>
+
+</html>
